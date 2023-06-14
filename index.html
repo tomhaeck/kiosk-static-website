@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <title>Kiosk</title>
+</head>
+<body>
+<div class="container">
+
+    <!-- navbar -->
+    <div class="bg-success-subtle bg-gradient rounded-5 mt-3">
+        <nav class="navbar navbar-expand-sm">
+            <div class="container">
+                <div class="navbar-brand">
+                    <span class="p-3">Kiosk</span>
+                </div>
+                <button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+                <div class="navbar-collapse collapse justify-content-center hstack gap-1" id="nav">
+                    <ul class="navbar-nav"v>
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+                        <li class="nav-item"><a href="#osteo" class="nav-link">Osteo</a></li>
+                        <li class="nav-item"><a href="#kine" class="nav-link">Kine</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mb-3"></div>
+
+    <!-- carousel -->
+    <div class="carousel slide border bg-white border-success-subtle rounded-5 p-3" data-bs-ride="carousel" id="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="test.jpg" class="d-block w-100 rounded-5 opacity-25" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="test.jpg" class="d-block w-100 rounded-5 opacity-25" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-success-subtle"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-success-subtle"></span>
+        </button>
+
+
+    </div>
+
+    <div class="mb-3"></div>
+
+    <!-- team -->
+    <div class="team p-3 border bg-success-subtle rounded-5" id="team">
+
+        <div class="card p-3 border border-0 rounded-5 mb-3">
+            <div class="row g-0">
+
+                <div class="col-sm-4 text-center">
+                    <img src="img.png" class="img-fluid rounded-circle" style="height:200px;">
+                </div>
+                <div class="col-sm-8 p-3">
+                    <div class="card-header col-8 mt-1 border rounded-5">
+                        Kinesiste en osteopathe
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fabienne Vandevijver</h5>
+                        <p class="card-text">Quisque sagittis purus sit amet volutpat consequat mauris nunc. Sed libero enim sed faucibus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-3 border border-0 rounded-5">
+            <div class="row g-0">
+
+                <div class="col-sm-4 text-center order-last">
+                    <img src="img.png" class="img-fluid rounded-circle" style="height:200px;">
+                </div>
+                <div class="col-sm-8 p-3 order-first">
+                    <div class="card-header col-8 mt-1 border rounded-5">
+                        Kinesist
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Jos Jossie</h5>
+                        <p class="card-text">Quisque sagittis purus sit amet volutpat consequat mauris nunc. Sed libero enim sed faucibus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mb-3"></div>
+
+    <!-- Kine and Osteo -->
+    <div class="border border-success-subtle rounded-5 p-5 mb-3" id="kine">
+        <h5>
+            Kinesitherapie
+        </h5>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida quis blandit turpis cursus in. Risus ultricies tristique nulla aliquet enim. Viverra tellus in hac habitasse platea dictumst.<figure class="text-end">
+            <blockquote class="blockquote">Kinesitherapie is heel moeilijk.</blockquote>
+            <figcaption class="blockquote-footer">Fabienne Vandevijver</figcaption>
+        </figure>
+
+    </div>
+    <div class="border border-success-subtle rounded-5 p-5 mb-3" id="osteo">
+        <h5>
+            Osteopathie
+        </h5>
+        <p class="lead">Nec nam aliquam sem et tortor consequat. Senectus et netus et malesuada fames ac turpis egestas sed. Arcu vitae elementum curabitur vitae nunc sed velit. Erat imperdiet sed euismod nisi porta lorem mollis aliquam ut.<figure>
+            <blockquote class="blockquote">Osteopathie is ook heel moeilijk.</blockquote>
+            <figcaption class="blockquote-footer">Fabienne Vandevijver</figcaption>
+        </figure>
+
+    </div>
+
+    <div class="team border bg-success-subtle rounded-5" id="contact">
+        <div class="row">
+            <iframe class="col-6 rounded-5 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9294.473134800031!2d4.886390884119617!3d50.777403613651295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c16e664d67ee45%3A0x643ed137e29531a3!2sHoegaarden!5e0!3m2!1snl!2sbe!4v1683460783902!5m2!1snl!2sbe" style="border:0; height:300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class=" col-6 p-5">
+                <p>Kiosk</p>
+                <p>Straat in Hoegaarden 1,<br>1000, Hoegaarden</p>
+                <p>Email: info@kiosk.be</p>
+                <p>04** ** ** **</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3"></div>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
