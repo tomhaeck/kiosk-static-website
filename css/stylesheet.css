@@ -1,0 +1,36 @@
+.background-primary {
+    background-color: rgb(37, 121, 122);
+}
+.background-secondary {
+    background-color: rgb(180, 205, 205);
+}
+.background-tertiary {
+    background-color: rgb(213, 228, 228);
+}
+
+.link-primary {
+    color: rgb(37, 121, 122);
+}
+
+.symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+}
+
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.bg-image-full {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+    opacity: 0.2;
+}
