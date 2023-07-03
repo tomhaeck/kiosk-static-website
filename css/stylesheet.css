@@ -12,6 +12,10 @@
     color: rgb(37, 121, 122);
 }
 
+.border-primary {
+    border-color: rgb(37, 121, 122);
+}
+
 .symbol {
     display: inline-flex;
     align-items: center;
