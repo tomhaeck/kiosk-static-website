@@ -12,10 +12,8 @@
     color: rgb(37, 121, 122);
 }
 
-.bd-primary {
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(37, 121, 122);
+.border-primary-custom {
+    border: solid 2px rgb(37, 121, 122);
 }
 
 .symbol {
