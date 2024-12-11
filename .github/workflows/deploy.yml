@@ -37,10 +37,10 @@ jobs:
           chmod 600 private-key.pem
 
           # Sync the files to EC2 using scp
-          scp -i private-key.pem -r . ec2-user@$INSTANCE_IP:/var/www/html
+          scp -i private-key.pem -r . ubuntu@$EC2_INSTANCE_IP:/var/www/html
 
           # Optional: SSH into the instance to set permissions
-          ssh -i private-key.pem ec2-user@$INSTANCE_IP "sudo chmod -R 755 /var/www/html"
+          ssh -i private-key.pem ubuntu@$EC2_INSTANCE_IP "sudo chmod -R 755 /var/www/html"
 
           # Clean up the private key
           rm -f private-key.pem
