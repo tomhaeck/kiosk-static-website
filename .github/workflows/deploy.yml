@@ -36,6 +36,9 @@ jobs:
           echo "$EC2_PRIVATE_KEY" > private-key.pem
           chmod 600 private-key.pem
 
+          # Add the EC2 instance to known_hosts to avoid host key verification error
+          ssh-keyscan -H $EC2_INSTANCE_ENDPOINT >> ~/.ssh/known_hosts
+
           # Sync the files to EC2 using scp
           scp -i private-key.pem -r . ubuntu@$EC2_INSTANCE_ENDPOINT:/var/www/html
 
