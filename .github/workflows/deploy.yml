@@ -29,11 +29,11 @@ jobs:
       # Step 4: Sync files to EC2
       - name: Sync files to EC2
         env:
-          PRIVATE_KEY: ${{ secrets.EC2_PRIVATE_KEY }}
-          INSTANCE_IP: ${{ secrets.EC2_INSTANCE_ENDPOINT }}
+          EC2_PRIVATE_KEY: ${{ secrets.EC2_PRIVATE_KEY }}
+          EC2_INSTANCE_ENDPOINT: ${{ secrets.EC2_INSTANCE_ENDPOINT }}
         run: |
           # Save the private key to a file
-          echo "$PRIVATE_KEY" > private-key.pem
+          echo "$EC2_PRIVATE_KEY" > private-key.pem
           chmod 600 private-key.pem
 
           # Sync the files to EC2 using scp
