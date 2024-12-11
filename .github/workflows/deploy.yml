@@ -1,4 +1,4 @@
-name: Deploy to S3
+name: Deploy to S3 and EC2
 
 on:
   push:
@@ -9,9 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Step 2: Configure AWS Credentials for S3
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -19,7 +21,26 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
 
+      # Step 3: Deploy files to S3
       - name: Deploy to S3
         run: |
           aws s3 sync . s3://kioskhoegaarden.be --delete
 
+      # Step 4: Sync files to EC2
+      - name: Sync files to EC2
+        env:
+          PRIVATE_KEY: ${{ secrets.EC2_PRIVATE_KEY }}
+          INSTANCE_IP: ${{ secrets.EC2_INSTANCE_IP }}
+        run: |
+          # Save the private key to a file
+          echo "$PRIVATE_KEY" > private-key.pem
+          chmod 600 private-key.pem
+
+          # Sync the files to EC2 using scp
+          scp -i private-key.pem -r . ec2-user@$INSTANCE_IP:/var/www/html
+
+          # Optional: SSH into the instance to set permissions
+          ssh -i private-key.pem ec2-user@$INSTANCE_IP "sudo chmod -R 755 /var/www/html"
+
+          # Clean up the private key
+          rm -f private-key.pem
