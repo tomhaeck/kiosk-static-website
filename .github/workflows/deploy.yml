@@ -43,7 +43,7 @@ jobs:
           ssh-keyscan -H $EC2_INSTANCE_ENDPOINT >> ~/.ssh/known_hosts
 
           # Sync the files to EC2 using scp
-          scp -i private-key.pem -r . ubuntu@$EC2_INSTANCE_ENDPOINT:/var/www/html
+          scp -i private-key.pem -r * ubuntu@$EC2_INSTANCE_ENDPOINT:/var/www/html
 
           # Optional: SSH into the instance to set permissions
           ssh -i private-key.pem ubuntu@$EC2_INSTANCE_ENDPOINT "sudo chmod -R 755 /var/www/html"
