@@ -50,7 +50,10 @@
      inkscape:groupmode="layer"
      inkscape:label="Image"
      id="g1"><g
-       id="g13"><image
+       id="g13"
+       inkscape:export-filename="g13.png"
+       inkscape:export-xdpi="95.116722"
+       inkscape:export-ydpi="95.116722"><image
          width="640"
          height="352"
          preserveAspectRatio="none"
